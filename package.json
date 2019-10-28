@@ -5,7 +5,10 @@
   "main": "index.js",
   "scripts": {
     "watch-server": "nodemon --watch src -e ts,tsx --exec ts-node src/server.ts",
-    "tsc": "tsc -p ./"
+    "tsc": "tsc -p ./",
+    "clean": "rm -rf dist",
+    "build": "npm run clean && npm run tsc",
+    "start": "node dist/server.js"
   },
   "repository": {
     "type": "git",
